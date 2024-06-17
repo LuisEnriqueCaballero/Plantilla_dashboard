@@ -6,9 +6,19 @@ contenidos.forEach(contenido=>{
     })
 });
 
-let navlink=document.querySelectorAll('.nav-link')
+let navlink=document.querySelectorAll('.nav-link');
 navlink.forEach(navl=>{
     navl.addEventListener('click',function(){
         navl.classList.toggle('click');
     })
+})
+
+let button = document.querySelector('.icon-des');
+let sidebar = document.querySelector(".sidebar");
+button.addEventListener('click', function(){
+    sidebar.classList.remove('sidebar1');
+})
+let close = document.querySelector(".close");
+close.addEventListener('click', function(){
+    sidebar.classList.add('sidebar1');
 })
