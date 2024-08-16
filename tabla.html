@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="conteiner">
+        <main class="sildebar">
+            <div class="logo">
+                <img class="icon-empresa" src="svg/dashboard-svgrepo-com.svg">
+                <p>empresa</p>
+            </div>
+            <nav class="navegador">
+                <ul class="contenido_menu">
+                    <li class="enlace">
+                        <div class="contenido_etique">
+                            <img src="svg/dashboard-4-svgrepo-com.svg" alt="">
+                            <div class="titulo_enlace">
+                                <a href="#">dashbord</a>
+                                <img src="svg/arrow-next-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+                        <ul class="contenido_menu-sub">
+                            <li class="sub_enlace">
+                                <a href="index.html">dashbord</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="enlace">
+                        <div class="contenido_etique">
+                            <img src="svg/dashboard-4-svgrepo-com.svg" alt="">
+                            <div class="titulo_enlace">
+                                <a href="#">dashbord</a>
+                                <img src="svg/arrow-next-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+                        <ul class="contenido_menu-sub">
+                            <li class="sub_enlace">
+                                <a href="tabla.html">Empleado</a>
+                            </li>
+                            <li class="sub_enlace">
+                                <a href="#">Proveedor</a>
+                            </li>
+                            <li class="sub_enlace">
+                                <a href="#">Cliente</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="enlace">
+                        <div class="contenido_etique">
+                            <img src="svg/dashboard-4-svgrepo-com.svg" alt="">
+                            <div class="titulo_enlace arrow">
+                                <a href="#">dashbord</a>
+                                <img src="svg/arrow-next-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+                        <ul class="contenido_menu-sub">
+                            <li class="sub_enlace">
+                                <a href="#">Categoria</a>
+                            </li>
+                            <li class="sub_enlace">
+                                <a href="#">Producto</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </main>
+        <div class="contenido">
+            <nav class="navegador_header">
+                <span class="fa fa-bars fa-1x" id="boton"  aria-hidden="true"></span>
+                <ul class="menu_mensaje">
+                    <li class="enlace_mensaje">
+                        <a href="#"><i class="fa fa-bell-o" aria-hidden="true">Notificacion</i></a>
+                        <ul >
+                            <li><a href="">mensaje</a></li>
+                            <li><a href="">mensaje</a></li>
+                            <li><a href="">mensaje</a></li>
+                        </ul>
+                    </li>
+                    <li class="enlace_mensaje">
+                        <a href="#"><i class="fa fa-bell-o" aria-hidden="true">Notificacion</i></a>
+                        <ul >
+                            <li><a href="">mensaje</a></li>
+                            <li><a href="">mensaje</a></li>
+                            <li><a href="">mensaje</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- cuerpo de la secion -->
+            <section class="contenido_informacion">
+                <div class="contenido_tabla">
+                    <div class="titulo_tabla">
+                        <div class="titulo">
+                            <h4>Lista Empleados</h4>
+                        </div>
+                        <div class="botones">
+                            <button class="btn"><i class="fa fa-plus" aria-hidden="true"></i> Agr.Empleado</button>
+                            <button class="btn"><i class="fa fa-cloud-upload" aria-hidden="true"></i> importar</button>
+                            <div class="export_infomacion">
+                                <button class="export btn"><i class="fa fa-cloud-download" aria-hidden="true"></i> exportar</button>
+                                <div >
+                                    <a href=""><i class="fa fa-cloud-upload" aria-hidden="true"></i> pdf</a>
+                                    <a href=""><i class="fa fa-cloud-upload" aria-hidden="true"></i> excel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="consultar_tabla">
+                        <div class="row">
+                            <div class="busquedas col-8">
+                                <div class="form-row">
+                                    <div class="form-group col-sm-4">
+                                        <label for="">direcion</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class=" form-group col-sm-4">
+                                        <label for="">telefono</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class=" form-group col-sm-4 campos" style="display: none;">
+                                        <label for="">ciudad</label>
+                                        <select name="" id=""  class="form-control">
+                                            <option value="">Peru</option>
+                                            <option value="">Mexico</option>
+                                            <option value="">Panama</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="consulta_informacion col-4">
+                                <div class="row d-flex justify-content-end">
+                                    <button class="form-control btn col-sm-3 filtro_empleado"><i class="fa fa-plus" aria-hidden="true"></i>filtros</button>
+                                    <button class="form-control btn col-sm-3"><i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabla">
+                        <div class="buscador-tabla">
+                            <input type="text" placeholder="empleado" name="empleado" id="empleado" class="form-control" >
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-bordered table-hover" id="tabla_empleado">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col" class="text-center p-2 text-capitalize w-col-8">orden</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">irst</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">Last</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize w-col-8">estado</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize w-col-15">accion</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="fila_impar">
+                                        <td scope="row">Enrique cballero</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td class="text-center">activo</td>
+                                        <td class="text-center p-2 accion">
+                                            <span class="btn fa fa-pencil editar" aria-hidden="true" title="editar"></span>
+                                            <span class="btn fa fa-info detalle" aria-hidden="true" title="detalle"></span>
+                                            <span class="btn fa fa-file-pdf-o pdf" aria-hidden="true" title="imprimi pdf"></span>
+                                            <span class="btn fa fa-cloud-upload excel" aria-hidden="true" title="export excel"></span>
+                                        </td>
+                                        
+                                      </tr>
+                                      <tr class="fila_par">
+                                        <td scope="row">Jose padilla</td>
+                                        <td class="text-center">Mark</td>
+                                        <td>Otto</td>
+                                        <td class="text-center">
+                                            <span class="btn" aria-hidden="true">activo</span>
+                                        </td>
+                                        <td class="text-center p-2 accion">
+                                            <span class="btn fa fa-pencil editar" aria-hidden="true" title="editar"></span>
+                                            <span class="btn fa fa-info detalle" aria-hidden="true" title="detalle"></span>
+                                            <span class="btn fa fa-file-pdf-o pdf" aria-hidden="true" title="imprimi pdf"></span>
+                                            <span class="btn fa fa-cloud-upload excel" aria-hidden="true" title="export excel"></span>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                    </div>
+                </div>
+            </section>
+           
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>
+<script src="lib/Jquery/jquery.slim.min.js"></script>
+<script src="lib/Jquery/popper.min.js"></script>
+<script src="lib/Jquery/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/2.1.4/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.1.4/js/dataTables.bootstrap4.js"></script>
+
+<script>
+     $(document).ready(function() {
+            $('#tabla_empleado').DataTable(
+                {
+                searching: false,
+                lengthChange: false,
+                info: false,
+                ordering: false,
+                paging: true,//mostrar pies de pagina
+                language: {
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Último",
+                    "next": ">",
+                    "previous": "<"
+                },
+              }
+             }
+            ); 
+        });
+     
+    $(document).ready(function(){
+        $('#empleado').keyup(function(){
+            let valor=$(this).val().toLowerCase();
+            $("#tabla_empleado tbody tr").each(function(){
+                var cellText = $(this).find("td:first").text().toLowerCase();
+                    $(this).toggle(cellText.indexOf(valor) > -1);
+            })
+        })
+    })
+
+    $(document).ready(function(){
+        $('.filtro_empleado').click(function(){
+            var valor=$('.campos').is(":hidden")
+            if(valor){
+                $('.campos').css("display","block")
+            }else{
+                $('.campos').css("display","none")
+            }
+            
+        })
+    })
+</script>
