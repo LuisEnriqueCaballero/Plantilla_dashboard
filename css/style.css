@@ -9,7 +9,7 @@
 
 :root{
     --fondo-sildebar: #424240b0;
-    --color-body:#EBEBEB;
+    --color-body:#fffcf4;
     --color-box:#FFFFFF;
     --color-text-primary:#00000E;
     --color-segundario-text:#fff;
@@ -32,7 +32,7 @@ body{
 /*inicio sildebar*/
 .sildebar{
     width: 280px;
-    background-color: var(--color-text-primary);
+    background-color: #0d0d0e;
     min-height: 100%;
     border-left: 1px solid var(--fondo-sildebar);
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.7);
@@ -361,21 +361,6 @@ table thead tr th{
     font-size: 1rem;
     font-weight: 600;
     color: var(--color-sildebar-hover);
-}
-table tbody tr td{
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--fondo-sildebar);
-}
-table tbody .fila_par{
-    font-size: 12px;
-    font-weight: 300;
-    background-color: #e0eee6;
-}
-table tbody .fila_impar{
-    font-size: 12px;
-    font-weight: 300;
-    background-color: #bcc4c4;
 }
 .w-col-8{
     width: 8%;
