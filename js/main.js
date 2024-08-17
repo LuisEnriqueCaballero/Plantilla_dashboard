@@ -3,12 +3,7 @@ let contenidos=document.querySelectorAll('.contenido_etique');
 let enlace_mensaje=document.querySelectorAll('.enlace_mensaje a');
 let boton=document.querySelector('#boton');
 let sildebar=document.querySelector('.sildebar');
-let boton_export =document.querySelector('.export_infomacion')
-
-boton_export.addEventListener('click',function(){
-    boton_export.lastElementChild.classList.toggle('div1')
-})
-
+let boton_export =document.querySelector('.export_infomacion');
 contenidos.forEach(contenido=>{
     contenido.addEventListener('click',()=>{
         contenido.classList.toggle('arrow')
@@ -32,4 +27,9 @@ enlace_mensaje.forEach(notifica=>{
 boton.addEventListener('click',()=>{
     console.log('hola');
 });
+
+
+boton_export.addEventListener('click',()=>{
+    boton_export.lastElementChild.classList.toggle('div1');
+})
 

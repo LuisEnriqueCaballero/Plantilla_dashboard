@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.4/css/dataTables.bootstrap4.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <!-- Modal -->
+  <div class="modal fade" id="modalmedia" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    
+  </div>
+  <div class="modal fade" id="modalimportar" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    
+  </div>
+  <!-- fin de modales -->
     <div class="conteiner">
         <main class="sildebar">
             <div class="logo">
-                <img class="icon-empresa" src="svg/dashboard-svgrepo-com.svg">
+                <img class="icon-empresa" src="../svg/dashboard-svgrepo-com.svg">
                 <p>empresa</p>
             </div>
             <nav class="navegador">
                 <ul class="contenido_menu">
                     <li class="enlace">
                         <div class="contenido_etique">
-                            <img src="svg/dashboard-4-svgrepo-com.svg" alt="">
+                            <img src="../svg/dashboard-4-svgrepo-com.svg" alt="">
                             <div class="titulo_enlace">
                                 <a href="#">dashbord</a>
-                                <img src="svg/arrow-next-svgrepo-com.svg" alt="">
+                                <img src="../svg/arrow-next-svgrepo-com.svg" alt="">
                             </div>
                         </div>
                         <ul class="contenido_menu-sub">
@@ -35,10 +43,10 @@
                     </li>
                     <li class="enlace">
                         <div class="contenido_etique">
-                            <img src="svg/dashboard-4-svgrepo-com.svg" alt="">
+                            <img src="../svg/dashboard-4-svgrepo-com.svg" alt="">
                             <div class="titulo_enlace">
                                 <a href="#">dashbord</a>
-                                <img src="svg/arrow-next-svgrepo-com.svg" alt="">
+                                <img src="../svg/arrow-next-svgrepo-com.svg" alt="">
                             </div>
                         </div>
                         <ul class="contenido_menu-sub">
@@ -55,10 +63,10 @@
                     </li>
                     <li class="enlace">
                         <div class="contenido_etique">
-                            <img src="svg/dashboard-4-svgrepo-com.svg" alt="">
+                            <img src="../svg/dashboard-4-svgrepo-com.svg" alt="">
                             <div class="titulo_enlace arrow">
                                 <a href="#">dashbord</a>
-                                <img src="svg/arrow-next-svgrepo-com.svg" alt="">
+                                <img src="../svg/arrow-next-svgrepo-com.svg" alt="">
                             </div>
                         </div>
                         <ul class="contenido_menu-sub">
@@ -103,7 +111,7 @@
                             <h4>Lista Empleados</h4>
                         </div>
                         <div class="botones">
-                            <button class="btn"><i class="fa fa-plus" aria-hidden="true"></i> Agr.Empleado</button>
+                            <button class="btn" onclick="viwemodal()"><i class="fa fa-plus" aria-hidden="true"></i> Agr.Empleado</button>
                             <button class="btn"><i class="fa fa-cloud-upload" aria-hidden="true"></i> importar</button>
                             <div class="export_infomacion">
                                 <button class="export btn"><i class="fa fa-cloud-download" aria-hidden="true"></i> exportar</button>
@@ -167,7 +175,7 @@
                                         <td>Otto</td>
                                         <td class="text-center">activo</td>
                                         <td class="text-center p-2 accion">
-                                            <span class="btn fa fa-pencil editar" aria-hidden="true" title="editar"></span>
+                                            <span class="btn fa fa-pencil editar" aria-hidden="true" title="editar" onclick="viwemodal()"></span>
                                             <span class="btn fa fa-info detalle" aria-hidden="true" title="detalle"></span>
                                             <span class="btn fa fa-file-pdf-o pdf" aria-hidden="true" title="imprimi pdf"></span>
                                             <span class="btn fa fa-cloud-upload excel" aria-hidden="true" title="export excel"></span>
@@ -194,15 +202,14 @@
                     </div>
                 </div>
             </section>
-           
         </div>
     </div>
 </body>
 </html>
-<script src="js/main.js"></script>
-<script src="lib/Jquery/jquery.slim.min.js"></script>
-<script src="lib/Jquery/popper.min.js"></script>
-<script src="lib/Jquery/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../lib/Jquery/jquery-3.6.0.min.js"></script>
+<script src="../lib/Jquery/popper.min.js"></script>
+<script src="../lib/Jquery/bootstrap.min.js"></script>
 <script src="https://cdn.datatables.net/2.1.4/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/2.1.4/js/dataTables.bootstrap4.js"></script>
 
@@ -248,4 +255,25 @@
             
         })
     })
+</script>
+<script>
+    function viwemodal() {
+    $.ajax({
+        url: "./modal/empleado/mantenimiento_empleado.html", // URL to fetch the HTML content
+        type: "POST", // HTTP method used for the request
+        dataType: 'HTML', // Expected data type from the server
+        success: function(data) {
+            // On successful response
+            $('#modalmedia').html(''); // Clear existing content in the modal
+            $('#modalmedia').html(data); // Insert fetched HTML into the modal
+            $('#modalmedia').modal({
+                keyboard: false, // Disable closing the modal with keyboard
+                backdrop: 'static', // Prevent closing modal by clicking outside
+                show: true // Display the modal
+            });
+        },
+        timeout: 4000 // Set timeout for the request (4 seconds)
+    });
+    
+}
 </script>
