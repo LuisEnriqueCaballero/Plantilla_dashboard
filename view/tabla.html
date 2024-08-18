@@ -86,19 +86,17 @@
                 <span class="fa fa-bars fa-1x" id="boton"  aria-hidden="true"></span>
                 <ul class="menu_mensaje">
                     <li class="enlace_mensaje">
-                        <a href="#"><i class="fa fa-bell-o" aria-hidden="true">Notificacion</i></a>
-                        <ul >
-                            <li><a href="">mensaje</a></li>
-                            <li><a href="">mensaje</a></li>
-                            <li><a href="">mensaje</a></li>
+                        <a href="#"><i class="text-warning fa fa-bell-o" aria-hidden="true"></i> notificacion</a>
+                        <ul>
+                            <li><a href=""><i class="fa fa-envelope" aria-hidden="true" style="color: rgb(215, 229, 242);"></i> mensaje</a></li>
+                            <li><a href=""><i class="fa fa-envelope" aria-hidden="true" style="color: rgb(215, 229, 242);"></i> mensaje</a></li>
                         </ul>
                     </li>
                     <li class="enlace_mensaje">
-                        <a href="#"><i class="fa fa-bell-o" aria-hidden="true">Notificacion</i></a>
+                        <a href="#"><i class="text-warning fa fa-bell-o" aria-hidden="true"></i> notificacion</a>
                         <ul >
-                            <li><a href="">mensaje</a></li>
-                            <li><a href="">mensaje</a></li>
-                            <li><a href="">mensaje</a></li>
+                            <li><a href=""><i class="fa fa-envelope" aria-hidden="true" style="color: rgb(215, 229, 242);"></i> mensajeaaaa</a></li>
+                            <li><a href=""><i class="fa fa-envelope" aria-hidden="true" style="color: rgb(215, 229, 242);"></i> mensaje</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -111,30 +109,30 @@
                             <h4>Lista Empleados</h4>
                         </div>
                         <div class="botones">
-                            <button class="btn" onclick="viwemodal()"><i class="fa fa-plus" aria-hidden="true"></i> Agr.Empleado</button>
-                            <button class="btn"><i class="fa fa-cloud-upload" aria-hidden="true"></i> importar</button>
+                            <button class="btn" onclick="viwemodal()"><i class="text-primary fa fa-plus" aria-hidden="true"></i> Agr.Empleado</button>
+                            <button class="btn"><i class="text-info fa fa-cloud-upload" aria-hidden="true"></i> importar</button>
                             <div class="export_infomacion">
-                                <button class="export btn"><i class="fa fa-cloud-download" aria-hidden="true"></i> exportar</button>
-                                <div >
-                                    <a href=""><i class="fa fa-cloud-upload" aria-hidden="true"></i> pdf</a>
-                                    <a href=""><i class="fa fa-cloud-upload" aria-hidden="true"></i> excel</a>
+                                <button class="export btn"><i class="text-info fa fa-cloud-download" aria-hidden="true"></i> exportar</button>
+                                <div>
+                                    <a href=""><i class="text-danger fa fa-file-pdf-o" aria-hidden="true"></i> pdf</a>
+                                    <a href=""><i class="text-success fa fa-file-excel-o" aria-hidden="true"></i> excel</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="consultar_tabla">
-                        <div class="row">
-                            <div class="busquedas col-8">
+                        <div class="consultar_tabla_busqueda">
+                            <div class="busquedas">
                                 <div class="form-row">
-                                    <div class="form-group col-sm-4">
+                                    <div class="form-group col-sm-6 ">
                                         <label for="">direcion</label>
                                         <input type="text" class="form-control">
                                     </div>
-                                    <div class=" form-group col-sm-4">
+                                    <div class=" form-group col-sm-6 ">
                                         <label for="">telefono</label>
                                         <input type="text" class="form-control">
                                     </div>
-                                    <div class=" form-group col-sm-4 campos" style="display: none;">
+                                    <div class=" form-group col-sm-6  campos" style="display: none;">
                                         <label for="">ciudad</label>
                                         <select name="" id=""  class="form-control">
                                             <option value="">Peru</option>
@@ -144,17 +142,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="consulta_informacion col-4">
-                                <div class="row d-flex justify-content-end">
-                                    <button class="form-control btn col-sm-3 filtro_empleado"><i class="fa fa-plus" aria-hidden="true"></i>filtros</button>
-                                    <button class="form-control btn col-sm-3"><i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
-                                </div>
+                            <div class="consulta_informacion">
+                                <button class="btn  filtro_empleado"><i class="text-primary fa fa-plus" aria-hidden="true"></i> filtros</button>
+                                <button class="btn "><i class="text-success fa fa-search" aria-hidden="true"></i> Buscar</button>
                             </div>
                         </div>
                     </div>
                     <div class="tabla">
                         <div class="buscador-tabla">
-                            <input type="text" placeholder="empleado" name="empleado" id="empleado" class="form-control" >
+                            <input type="text" placeholder="nombre...." name="empleado" id="empleado" class="form-control" >
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </div>
                             <div class="table-responsive">
@@ -164,6 +160,16 @@
                                         <th scope="col" class="text-center p-2 text-capitalize w-col-8">orden</th>
                                         <th scope="col" class="text-center p-2 text-capitalize">irst</th>
                                         <th scope="col" class="text-center p-2 text-capitalize">Last</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">irst</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">Last</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">irst</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">Last</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">irst</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">Last</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">irst</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">Last</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">irst</th>
+                                        <th scope="col" class="text-center p-2 text-capitalize">Last</th>
                                         <th scope="col" class="text-center p-2 text-capitalize w-col-8">estado</th>
                                         <th scope="col" class="text-center p-2 text-capitalize w-col-15">accion</th>
                                       </tr>
@@ -171,6 +177,16 @@
                                     <tbody>
                                       <tr>
                                         <td >Enrique cballero</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td class="text-center">activo</td>
@@ -184,6 +200,16 @@
                                       <tr>
                                         <td >Jose padilla</td>
                                         <td class="text-center">Mark</td>
+                                        <td>Otto</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Mark</td>
                                         <td>Otto</td>
                                         <td class="text-center">
                                             <span class="btn" aria-hidden="true">activo</span>
