@@ -191,10 +191,20 @@
                                         <td>Otto</td>
                                         <td class="text-center">activo</td>
                                         <td class="text-center p-2 accion">
-                                            <span class="btn fa fa-pencil editar" aria-hidden="true" title="editar" onclick="viwemodal()"></span>
-                                            <span class="btn fa fa-info detalle" aria-hidden="true" title="detalle"></span>
-                                            <span class="btn fa fa-file-pdf-o pdf" aria-hidden="true" title="imprimi pdf"></span>
-                                            <span class="btn fa fa-cloud-upload excel" aria-hidden="true" title="export excel"></span>
+                                            <div class="configuracion">
+                                                <button class="btn btn-sm"><i class="text-info fa fa-cog" aria-hidden="true"></i> Config</button>
+                                                <div>
+                                                    <span  onclick="viwemodal()">
+                                                        <i class="text-success fa fa-pencil" aria-hidden="true"></i> editar
+                                                    </span>
+                                                    <span>
+                                                        <i class="text-danger fa fa-file-pdf-o" aria-hidden="true"></i> imprimir
+                                                    </span>
+                                                    <span>
+                                                        <i class="text-primary fa fa-id-card-o" aria-hidden="true"></i> detalle
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </td>
                                       </tr>
                                       <tr>
@@ -212,7 +222,7 @@
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td class="text-center">
-                                            <span class="btn" aria-hidden="true">activo</span>
+                                            <span>activo</span>
                                         </td>
                                         <td class="text-center p-2 accion">
                                             <span class="btn fa fa-pencil editar" aria-hidden="true" title="editar"></span>
@@ -222,6 +232,27 @@
                                         </td>
                                       </tr>
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="16"><nav aria-label="Page navigation example">
+                                                <ul class="pagination justify-content-end pagination-sm">
+                                                  <li class="page-item disabled">
+                                                    <a class="page-link">
+                                                        <i class="fa fa-backward" aria-hidden="true"></i>
+                                                    </a>
+                                                  </li>
+                                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                  <li class="page-item">
+                                                    <a class="page-link" href="#">
+                                                        <i class="fa fa-forward" aria-hidden="true"></i>
+                                                    </a>
+                                                  </li>
+                                                </ul>
+                                              </nav></td>
+                                        </tr>
+                                    </tfoot>
                                   </table>
                             </div>
                     </div>
@@ -239,26 +270,6 @@
 <script src="https://cdn.datatables.net/2.1.4/js/dataTables.bootstrap4.js"></script>
 
 <script>
-     $(document).ready(function() {
-            $('#tabla_empleado').DataTable(
-                {
-                searching: false,
-                lengthChange: false,
-                info: false,
-                ordering: false,
-                paging: true,//mostrar pies de pagina
-                language: {
-                "paginate": {
-                    "first": "Primero",
-                    "last": "Último",
-                    "next": ">",
-                    "previous": "<"
-                },
-              }
-             }
-            ); 
-        });
-     
     $(document).ready(function(){
         $('#empleado').keyup(function(){
             let valor=$(this).val().toLowerCase();
