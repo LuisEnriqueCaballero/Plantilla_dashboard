@@ -6,7 +6,6 @@
     font-weight: 400;
     box-sizing: border-box;/*eliminar los valores de los bordes*/
 }
-
 :root{
     --fondo-sildebar: #424240b0;
     --color-body:#fffcf4;
@@ -40,26 +39,32 @@ body{
 }
 .logo{
     width: 100%;
-    height: 60px;
-    display: flex;
-    column-gap: 10px;
+    display: grid;
+    grid-template-columns: 70px 60%;
+    grid-template-rows: 60px;
     justify-content: center;
     align-items: center;
 }
-.logo p{
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    color: var(--color-segundario-text);
-    padding: 10px 5px;
-    margin-top: 18px;
-    font-weight: 600;
-    letter-spacing: 2px;
+.close_sildebar{
+    cursor: pointer;
+    background: none;
+    height: 40px;
+    width: 40px;
+    border: none;
+    display: none;
 }
+.logo .nombre_empresa{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color: var(--color-box);
+    margin-top: 15px;
+    font-weight: 400;
+}
+/*temina logo*/
 .navegador{
     color: var(--fondo-sildebar-texto);
     height: calc(100vh - 60px);
 }
-
 .contenido_menu {
     margin:15px 0px 10px 15px;
     list-style: none;
@@ -96,7 +101,6 @@ body{
     align-items: center;
     column-gap: 10px;
 }
-
 .contenido_etique div{
     display: flex;
     justify-content: space-between;
@@ -118,7 +122,6 @@ body{
     font-size: 1rem;
     font-weight: 400;
 }
-
 /*fin sildebar*/
 .contenido{
     width: calc(100% - 280px);
@@ -129,15 +132,16 @@ body{
     position: relative;
     height: 60px;
     display: grid;
-    grid-template-columns: 30px 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     padding: 0px 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
-.navegador_header span{
-    display: flex;
-    width: 100%;
-    justify-content: center;
+.navegador_header .open_menu{
+    display: none;
+}
+.navegador_header .open_menu span{
+    padding: 10px;
 }
 .navegador_header .menu_mensaje{
     width: 100%;
@@ -186,7 +190,6 @@ body{
     text-decoration: none;
 }
 /*fin de la correcion*/
-
 .caja_informacion{
     width: 95%;
     margin: auto;
@@ -201,7 +204,7 @@ body{
     height: 180px;
     width: 100%;
     margin: auto;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
     cursor: pointer;
     background-color: var(--color-box);
     z-index: 0;
@@ -221,7 +224,7 @@ body{
 }
 .box{
     border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     background-color: var(--color-box);
     cursor: pointer;
 }
@@ -291,7 +294,7 @@ body{
     position: relative;
     width: 100%;
 }
-.export_infomacion div {
+.export_infomacion div{
     display: none;
 }
 .export_infomacion .div1{
@@ -539,7 +542,7 @@ table tbody tr .accion span{
 /*inicio tamaño tablet*/
  @media (768px <= width < 1024px){
     .sildebar{
-        background-color: var(--fondo-sildebar);
+        background-color: #383838;
     }
     .navegador_header{
         padding: 0px 5px;
@@ -657,17 +660,22 @@ table tbody tr .accion span{
     }
     .sildebar{
         position: fixed;
-        width: 0px;
-        background-color: var(--color-text-primary);
+        width:280px;
+        background-color: #383838;
         z-index: 100;
+    }
+    .logo{
+        grid-template-columns: 70px 46% 40px;
+    }
+    .close_sildebar{
+        display: block;
     }
     .contenido{
         width: 100%;
         border: 1px solid black;
         background-color: #fff;
-        z-index: -100;
+        z-index: 100;
     }
-    /**/
     .navegador_header{
         height: 100px;
         grid-template-columns: 100%;
@@ -675,9 +683,11 @@ table tbody tr .accion span{
         align-items: center;
         padding: 0px 0px;
     }
-    .navegador_header span{
-        justify-content: start;
-        padding: 0px 10px;
+    .navegador_header .open_menu{
+        display: block;
+    }
+    .navegador_header .open_menu span{
+        padding: 15px;
     }
     .navegador_header .menu_mensaje{
         grid-template-columns: repeat(2 , 100px);
@@ -697,7 +707,6 @@ table tbody tr .accion span{
     .menu_mensaje .enlace_mensaje ul li a{
         font-size: 10px;
     }
-    /**/
      .caja_informacion{
         width: 98%;
         margin-top: 10px;

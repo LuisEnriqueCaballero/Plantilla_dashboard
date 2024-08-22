@@ -13,7 +13,10 @@
         <main class="sildebar">
             <div class="logo">
                 <img class="icon-empresa" src="../svg/dashboard-svgrepo-com.svg">
-                <p>empresa</p>
+                <p class="nombre_empresa">empresa</p>
+                <button class="close_sildebar" onclick="hola()">
+                    <img class="close_icono" src="../svg/close-svgrepo-com.svg" alt="">
+                </button>
             </div>
             <nav class="navegador">
                 <ul class="contenido_menu">
@@ -73,7 +76,9 @@
         </main>
         <div class="contenido">
             <nav class="navegador_header">
-                <span class="fa fa-bars fa-1x" id="boton"  aria-hidden="true"></span>
+                <div class="open_menu">
+                    <span class="fa fa-bars fa-1x" onclick="openmenu()"  aria-hidden="true"></span>
+                </div>
                 <ul class="menu_mensaje">
                     <li class="enlace_mensaje">
                         <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i> notificacion</a>
@@ -129,3 +134,15 @@
 <script src="../lib/Jquery/jquery-3.6.0.min.js"></script>
 <script src="../lib/Jquery/popper.min.js"></script>
 <script src="../lib/Jquery/bootstrap.min.js"></script>
+<script>
+    function hola(){
+        sildebar=document.querySelector('.sildebar');
+        sildebar.style.transform="translateX(-280px)";
+        sildebar.style.transitionDuration = "2s";
+    }
+    function openmenu(){
+        sildebar=document.querySelector('.sildebar');
+        sildebar.style.transform="translateX(0px)";
+        sildebar.style.transitionDuration = "2s";
+    }
+</script>

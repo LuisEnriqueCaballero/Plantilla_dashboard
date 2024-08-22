@@ -112,7 +112,7 @@
                             <button class="btn" onclick="viwemodal()"><i class="text-primary fa fa-plus" aria-hidden="true"></i> Agr.Empleado</button>
                             <button class="btn"><i class="text-info fa fa-cloud-upload" aria-hidden="true"></i> importar</button>
                             <div class="export_infomacion">
-                                <button class="export btn"><i class="text-info fa fa-cloud-download" aria-hidden="true"></i> exportar</button>
+                                <button class="export btn" onclick="exportar()"><i class="text-info fa fa-cloud-download" aria-hidden="true"></i> exportar</button>
                                 <div>
                                     <a href=""><i class="text-danger fa fa-file-pdf-o" aria-hidden="true"></i> pdf</a>
                                     <a href=""><i class="text-success fa fa-file-excel-o" aria-hidden="true"></i> excel</a>
@@ -149,6 +149,10 @@
                         </div>
                     </div>
                     <div class="tabla">
+                        <div class="opciones_tablas">
+                            <div class="opcion_tabla" onclick="onlaod(1)">menus</div>
+                            <div class="opcion_tabla" onclick="onlaod(2)">sub menus</div>
+                        </div>
                         <div class="buscador-tabla">
                             <input type="text" placeholder="nombre...." name="empleado" id="empleado" class="form-control" >
                             <i class="fa fa-search" aria-hidden="true"></i>
@@ -193,7 +197,7 @@
                                         <td class="text-center p-2">
                                             <div class="configuracion">
                                                 <button class="btn btn-sm"><i class="text-info fa fa-cog" aria-hidden="true"></i> Config</button>
-                                                <div>
+                                                <div class="botones_config">
                                                     <span  onclick="viwemodal()">
                                                         <i class="text-success fa fa-pencil" aria-hidden="true"></i> editar
                                                     </span>
@@ -208,9 +212,7 @@
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td >Jose padilla</td>
-                                        <td class="text-center">Mark</td>
-                                        <td>Otto</td>
+                                        <td >Enrique cballero</td>
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td>Mark</td>
@@ -221,14 +223,24 @@
                                         <td>Otto</td>
                                         <td>Mark</td>
                                         <td>Otto</td>
-                                        <td class="text-center">
-                                            <span>activo</span>
-                                        </td>
-                                        <td class="text-center p-2 accion">
-                                            <span class="btn fa fa-pencil editar" aria-hidden="true" title="editar"></span>
-                                            <span class="btn fa fa-info detalle" aria-hidden="true" title="detalle"></span>
-                                            <span class="btn fa fa-file-pdf-o pdf" aria-hidden="true" title="imprimi pdf"></span>
-                                            <span class="btn fa fa-cloud-upload excel" aria-hidden="true" title="export excel"></span>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td class="text-center">activo</td>
+                                        <td class="text-center p-2">
+                                            <div class="configuracion">
+                                                <button class="btn btn-sm"><i class="text-info fa fa-cog" aria-hidden="true"></i> Config</button>
+                                                <div class="botones_config">
+                                                    <span  onclick="viwemodal()">
+                                                        <i class="text-success fa fa-pencil" aria-hidden="true"></i> editar
+                                                    </span>
+                                                    <span>
+                                                        <i class="text-danger fa fa-file-pdf-o" aria-hidden="true"></i> imprimir
+                                                    </span>
+                                                    <span>
+                                                        <i class="text-primary fa fa-id-card-o" aria-hidden="true"></i> detalle
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -258,6 +270,9 @@
                     </div>
                 </div>
             </section>
+            <footer class="pies_pagina">
+                <p>Creacion del a&ntilde;o 2024 Luis enrique</p>
+            </footer>
         </div>
     </div>
 </body>
@@ -270,6 +285,11 @@
 <script src="https://cdn.datatables.net/2.1.4/js/dataTables.bootstrap4.js"></script>
 
 <script>
+    function exportar(){
+        let exportar=document.querySelector('.export_infomacion div');
+        exportar.classList.toggle('div1');
+    }
+
     $(document).ready(function(){
         $('#empleado').keyup(function(){
             let valor=$(this).val().toLowerCase();
@@ -318,7 +338,7 @@
     font-size: 12px;
     font-weight: 300;
     color:black;
-    background-color: #fffcf4;
+    background-color: #b38b1c;
 }
 tbody tr {
 background-color: black;

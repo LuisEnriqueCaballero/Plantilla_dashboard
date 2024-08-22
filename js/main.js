@@ -1,9 +1,7 @@
 /*Variables */
 let contenidos=document.querySelectorAll('.contenido_etique');
 let enlace_mensaje=document.querySelectorAll('.enlace_mensaje a');
-let boton=document.querySelector('#boton');
 let sildebar=document.querySelector('.sildebar');
-let boton_export =document.querySelector('.export_infomacion');
 
 /*configuracion*/
 let confs=document.querySelectorAll(".configuracion");
@@ -28,19 +26,9 @@ enlace_mensaje.forEach(notifica=>{
     })
 })
 /*eventos */
-boton.addEventListener('click',()=>{
-    console.log('hola');
-});
-
-
-boton_export.addEventListener('click',()=>{
-    boton_export.lastElementChild.classList.toggle('div1');
-})
-
-confs.forEach(conf=>{
+    confs.forEach(conf=>{
     conf.addEventListener('click',()=>{
         let lastchild=conf.lastElementChild;
-        lastchild.classList.toggle('botones_config');
+        lastchild.classList.toggle('herramiento_conf');
     })
 })
-
