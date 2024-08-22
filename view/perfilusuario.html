@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Modal -->
+  <div class="modal fade" id="modalmedia" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    
+  </div>
+  <div class="modal fade" id="modalimportar" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    
+  </div>
+  <!-- fin de modales -->
+    <div class="conteiner">
+        <main class="sildebar">
+            <div class="logo">
+                <img class="icon-empresa" src="../svg/dashboard-svgrepo-com.svg">
+                <p>empresa</p>
+            </div>
+            <nav class="navegador">
+                <ul class="contenido_menu">
+                    <li class="enlace">
+                        <div class="contenido_etique">
+                            <img src="../svg/dashboard-4-svgrepo-com.svg" alt="">
+                            <div class="titulo_enlace">
+                                <a href="#">dashbord</a>
+                                <img src="../svg/arrow-next-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+                        <ul class="contenido_menu-sub">
+                            <li class="sub_enlace">
+                                <a href="index.html">dashbord</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="enlace">
+                        <div class="contenido_etique">
+                            <img src="../svg/dashboard-4-svgrepo-com.svg" alt="">
+                            <div class="titulo_enlace">
+                                <a href="#">dashbord</a>
+                                <img src="../svg/arrow-next-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+                        <ul class="contenido_menu-sub">
+                            <li class="sub_enlace">
+                                <a href="tabla.html">Empleado</a>
+                            </li>
+                            <li class="sub_enlace">
+                                <a href="#">Proveedor</a>
+                            </li>
+                            <li class="sub_enlace">
+                                <a href="#">Cliente</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="enlace">
+                        <div class="contenido_etique">
+                            <img src="../svg/dashboard-4-svgrepo-com.svg" alt="">
+                            <div class="titulo_enlace arrow">
+                                <a href="#">dashbord</a>
+                                <img src="../svg/arrow-next-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+                        <ul class="contenido_menu-sub">
+                            <li class="sub_enlace">
+                                <a href="#">Categoria</a>
+                            </li>
+                            <li class="sub_enlace">
+                                <a href="#">Producto</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </main>
+        <div class="contenido">
+            <nav class="navegador_header">
+                <span class="fa fa-bars fa-1x" id="boton"  aria-hidden="true"></span>
+                <ul class="menu_mensaje">
+                    <li class="enlace_mensaje">
+                        <a href="#"><i class="text-warning fa fa-bell-o" aria-hidden="true"></i> notificacion</a>
+                        <ul>
+                            <li><a href=""><i class="fa fa-envelope" aria-hidden="true" style="color: rgb(215, 229, 242);"></i> mensaje</a></li>
+                            <li><a href=""><i class="fa fa-envelope" aria-hidden="true" style="color: rgb(215, 229, 242);"></i> mensaje</a></li>
+                        </ul>
+                    </li>
+                    <li class="enlace_mensaje">
+                        <a href="#"><i class="text-warning fa fa-bell-o" aria-hidden="true"></i> notificacion</a>
+                        <ul >
+                            <li><a href=""><i class="fa fa-envelope" aria-hidden="true" style="color: rgb(215, 229, 242);"></i> mensajeaaaa</a></li>
+                            <li><a href=""><i class="fa fa-envelope" aria-hidden="true" style="color: rgb(215, 229, 242);"></i> mensaje</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- cuerpo de la secion -->
+            <section class="contenido_informacion">
+                <div class="config_perfil">
+                    <div class="titulo_config_perfil">
+                        <p>Perfil usuario</p>
+                    </div>
+                    <div class="datos_usuario">
+                        <div class="foto_usuairo">
+                            <img src="../svg/user-hand-up-svgrepo-com.svg" alt="" width="250px" height="250px">
+                        </div>
+                        <div class="datos_usuario1">
+                            <div class="dato_personale_usuario">
+                                <div>
+                                    <p class="datopersona">nombre completo</p>
+                                    <p class="datopersona1">Luis enrique</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">apellido completo</p>
+                                    <p class="datopersona1">caballero canchaya</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">n° celular</p>
+                                    <p class="datopersona1">+51 936165624</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">fecha de nacimiento</p>
+                                    <p class="datopersona1">02 de febrero 1991</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">edad</p>
+                                    <p class="datopersona1">33 anios</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">genero</p>
+                                    <p class="datopersona1">masculino</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">area trabajo</p>
+                                    <p class="datopersona1">ingeniria sistemas</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">tipo documento</p>
+                                    <p class="datopersona1">DNI</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">n° documento</p>
+                                    <p class="datopersona1">47513591</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">pais</p>
+                                    <p class="datopersona1">peru</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">departemento convive</p>
+                                    <p class="datopersona1">lima</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">provincia</p>
+                                    <p class="datopersona1">lima</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">distrito</p>
+                                    <p class="datopersona1">san juan de lurigancho</p>
+                                </div>
+                                <div>
+                                    <p class="datopersona">direccion</p>
+                                    <p class="datopersona1">Urb. la huayrona jr los asbesto n° 500 ref. av. 13 de enero</p>
+                                </div>
+                            </div>
+                            <div class="trabajado_hijo">
+                                <div class="titulo_tabla1">
+                                    <p>Lista cuentas</p>
+                                    <div>
+                                        <button class="btn btn-sm"><i class="fa fa-plus" aria-hidden="true"></i> agre hijo</button>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="text-center text-capitalize">
+                                            <th>nombre</th>
+                                            <th>apellido</th>
+                                            <th>fech. nac</th>
+                                            <th>edad</th>
+                                            <th>accion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="text-center">
+                                            <td>zoe vittoria</td>
+                                            <td>caballero hinostroza</td>
+                                            <td>26/09/2023</td>
+                                            <td>0 anio</td>
+                                            <td>
+                                                <span class="btn fa fa-pencil text-success" aria-hidden="true"></span>
+                                                <span class="btn fa fa-trash-o text-danger" aria-hidden="true"></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="trabajado_hijo">
+                                <div class="titulo_tabla1">
+                                    <p>Lista cuentas</p>
+                                    <div>
+                                        <button class="btn btn-sm"><i class="fa fa-plus" aria-hidden="true"></i> agre cuenta</button>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="text-center text-capitalize">
+                                            <th>banco</th>
+                                            <th>n cuenta</th>
+                                            <th>tipo moneda</th>
+                                            <th>accion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="text-center">
+                                            <td>bcp</td>
+                                            <td>191-050-00000222</td>
+                                            <td>soles</td>
+                                            <td>
+                                                <span class="btn fa fa-pencil text-success" aria-hidden="true"></span>
+                                                <span class="btn fa fa-trash-o text-danger" aria-hidden="true"></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="pies_pagina">
+                <p>Creacion del a&ntilde;o 2024 Luis enrique</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/main.js"></script>
+<script src="../lib/Jquery/jquery-3.6.0.min.js"></script>
+<script src="../lib/Jquery/popper.min.js"></script>
+<script src="../lib/Jquery/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/2.1.4/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.1.4/js/dataTables.bootstrap4.js"></script>
+

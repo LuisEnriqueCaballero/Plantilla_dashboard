@@ -562,6 +562,99 @@ table tbody tr .accion span{
     margin-bottom: 5px;
 }
 /*panel permiso*/
+/*perfil de usuario*/
+.config_perfil{
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px auto;
+    background-color: var(--color-segundario-text);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+.config_perfil .titulo_config_perfil{
+    padding: 5px;
+}
+.config_perfil .titulo_config_perfil p{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--fondo-sildebar);
+}
+.datos_usuario{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 300px auto;
+}
+.foto_usuairo img{
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px;
+    background-color: #fff;
+}
+.datos_usuario1{
+    width: 100%;
+    display: grid;
+    grid-template-columns:100%;
+    row-gap: 10px;
+    padding: 10px 10px;
+}
+.dato_personale_usuario{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.datopersona{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-border-boton);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.datopersona1{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--fondo-sildebar);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.trabajado_hijo{
+    width: 100%;
+    grid-template-columns: 100%;
+    margin: auto;
+}
+.trabajado_hijo p{
+    text-transform: capitalize;
+    color: var(--fondo-sildebar);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0px;
+}
+.titulo_tabla1{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 200px auto;
+    align-items: center;
+}
+.titulo_tabla1 div {
+    display: flex;
+    justify-content: end;
+}
+.titulo_tabla1 div button{
+    width: 160px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: none;
+    box-shadow: 0px 0px 5px;
+    color: #7a9e9e;
+    text-transform: capitalize;
+}
+
+/*fin perfil de usuario*/
 /*fin tamaño Computadora*/
 /*inicio tamaño tablet*/
  @media (768px <= width < 1024px){
