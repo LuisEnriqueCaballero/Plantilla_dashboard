@@ -32,10 +32,10 @@ body{
 /*inicio sildebar*/
 .sildebar{
     width: 280px;
-    background-color: #0d0d0e;
+    background-color: #383838;
     min-height: 100%;
     border-left: 1px solid var(--fondo-sildebar);
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 1px 0px rgba(110, 108, 108, 0.7);
     border-radius: 2px;
 }
 .logo{
@@ -59,20 +59,38 @@ body{
     color: var(--fondo-sildebar-texto);
     height: calc(100vh - 60px);
 }
-.contenido_menu{
-    margin:15px 0px 10px 15px
-}
-ul{
+
+.contenido_menu {
+    margin:15px 0px 10px 15px;
     list-style: none;
+    margin-top: 10px;
+    list-style: none;
+}
+.enlace{
+    margin-top: 10px;
 }
 .enlace>ul{
     display: block;
     margin-left: 38px;
     height: 0px;
     overflow-y:hidden ;
-    transition: 1000ms;
+    transition: 500ms;
 }
-
+.enlace>ul>li{
+   margin: 5px 0px;
+   padding: 5px 0px;
+   padding-left: 10px;
+   font-size: 12px;
+}
+.enlace>ul>li>a{
+    font-size: 13px;
+    letter-spacing: 1px;
+ }
+ .enlace>ul>li>a:hover{
+    transition: 500ms;
+    border-bottom: 1px solid var(--color-sildebar-hover);
+    color: var(--color-sildebar-hover);
+ }
 .contenido_etique {
     display: flex;
     align-items: center;
@@ -82,7 +100,7 @@ ul{
 .contenido_etique div{
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 80%;
     padding: 10px 0px;
 }
 .contenido_etique div img{
@@ -98,7 +116,7 @@ ul{
     color: #f8f8f9;
     text-transform: capitalize;
     font-size: 1rem;
-    font-weight: bolder;
+    font-weight: 400;
 }
 
 /*fin sildebar*/
@@ -110,11 +128,11 @@ ul{
 .navegador_header{
     position: relative;
     height: 60px;
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 30px 1fr;
     align-items: center;
     padding: 0px 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 .navegador_header span{
     display: flex;
@@ -212,14 +230,12 @@ ul{
 }
 .pies_pagina{
     width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    color: #2F3645;
-    background-color: var(--color-box);
+    text-align: left;
+    font-size: 12px;
+    color: var(--fondo-sildebar);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding-left: 10px;
 }
 /*tabla*/
 .contenido_tabla{
@@ -359,6 +375,7 @@ ul{
 /*fin de la consulta*/
 /*correcion buscador tabla*/
 .tabla{
+    position: relative;
     width: 98%;
     display: flex;
     flex-wrap: wrap;
@@ -371,10 +388,39 @@ ul{
     box-shadow: 2px 2px 0px var(--color-border-boton);
     margin-bottom: 50px;
 }
+.opciones_tablas{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: grid;
+    grid-template-columns: 140px 140px;
+    grid-template-rows: 30px;
+    align-items: center;
+    border-radius: 5px;
+    column-gap: 5px;
+}
+.opcion_tabla{
+    padding: 5px 0px;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--fondo-sildebar);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    background-color: var(--color-body);
+    transition: 500ms;
+    font-size: 15px;
+    font-weight: 600;
+}
+.opcion_tabla:hover{
+    background-color: var(--color-sildebar-hover);
+    color: #F7EFE5;
+}
 .buscador-tabla{
     position: relative;
     width: 100%;
-    margin: 10px 0px;
+    margin: 40px 0px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: flex-end;
 }
@@ -409,39 +455,13 @@ table thead tr th{
 .w-col-15{
     width: 15%;
 }
-table tbody tr .accion{
-    display: flex;
-    column-gap: 5px;
-}
 /*añadiendo nuevo funcion*/
+
 table tbody tr td .configuracion{
     position: relative;
     width: 100%;
     text-align: center;
     height: 100%;
-}
-table tbody tr td .configuracion button{
-    position: relative;
-    text-align: center;
-    width: 80px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    font-size: 12px;
-}
-table tbody tr td .configuracion div{
-    display: none;
-}
-table tbody tr td .configuracion .botones_config{
-    display: block;
-    position: absolute;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
-    width: 60%;
-    margin-left: 35px;
-    margin-top: 5px;
-    font-size: 12px;
-    z-index: 100;
-    background-color: var(--color-body);
 }
 table tbody tr td .configuracion div span{
     display: block;
@@ -454,41 +474,67 @@ table tbody tr td .configuracion div span:hover{
    background-color: #c9c4c4;
 }
 /**/
-table tbody tr .accion .editar{
-    border: 1px solid green;
-    color: green;
-    background-color: #FFFFFF;
+table tbody tr .accion{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
 }
-table tbody tr .accion .detalle{
-    border: 1px solid blue;
-    color: blue;
-    background-color: #FFFFFF;
-}
-table tbody tr .accion .pdf{
-    border: 1px solid red;
-    color: red;
-    background-color: #FFFFFF;
-}
-table tbody tr .accion .excel{
-    border: 1px solid #0c4d0cdb;
-    color: #0c4d0cdb;
-    background-color: #FFFFFF;
-}
-table tbody tr .accion1{
-    position: relative;
-}
-table tbody tr .accion1 .nav_accion .enlace_accion{
-    display:block;
-}
-table tbody tr .accion1 .nav_accion .enlace_accion .enlaces_accion{
-    position: absolute;
-    display:inline-block;
-    border: 1px solid red;
-    z-index: 100;
-    background-color: #fff;
-    top:30px;
+table tbody tr .accion span{
+    cursor: pointer;
+    padding: 8px 8px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 /*fin tabla*/
+/*panel permiso*/
+.panel_permisos{
+    width: 95%;
+    margin: 15px auto;
+    background-color: var(--color-segundario-text);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.panel_permisos .titulo_permiso{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    
+}
+.panel_permisos .titulo_permiso p{
+    font-weight: 600;
+    color: var(--fondo-sildebar);
+    letter-spacing: 5px;
+}
+.formulario_permiso{
+    width: 100%;
+}
+.formulario_control{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+    justify-content: space-around;
+}
+.permiso_accesos{
+    font-size: 12px;
+    color: var(--color-sildebar-hover);
+    text-transform: capitalize;
+    padding: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: var(--color-box);
+}
+.titulo_navegadores{
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+/*panel permiso*/
 /*fin tamaño Computadora*/
 /*inicio tamaño tablet*/
  @media (768px <= width < 1024px){
