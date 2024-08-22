@@ -466,15 +466,39 @@ table tbody tr td .configuracion{
     text-align: center;
     height: 100%;
 }
-table tbody tr td .configuracion div span{
-    display: block;
+table tbody tr td .configuracion button{
+    position: relative;
+    width: 80px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    background-color: var(--color-segundario-text);
+}
+table tbody tr td .configuracion div{
+    display: none;
+}
+table tbody tr td .configuracion .config_aceso{
+    position: absolute;
+    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    top: 30px;
+    left: 35px;
+    z-index: 100;
+    background-color: var(--color-body);
     text-transform: capitalize;
-    color: var(--fondo-sildebar);
-    padding: 4px 0px;
+    padding: 5px auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+table tbody tr td .configuracion div span{
+    width: 100%;
     cursor: pointer;
+    margin-top: 2px;
 }
 table tbody tr td .configuracion div span:hover{
-   background-color: #c9c4c4;
+    width: 100%;
+    background-color: var(--color-sildebar-hover);
 }
 /**/
 table tbody tr .accion{
@@ -648,6 +672,11 @@ table tbody tr .accion span{
         width: 98%;
         margin: auto;
     }
+    table tbody tr td .configuracion div{
+        top: 30px;
+        right: 5px;
+        left: 0px;
+    }
     /*fin*/
     /*tabla informacion*/
     /*fin*/
@@ -782,5 +811,9 @@ table tbody tr .accion span{
     .buscador-tabla i{
         top: 7px;
         left: 20px;
+    }
+    table tbody tr td .configuracion div{
+        top: 30px;
+        left: 10px;
     }
 }
