@@ -500,17 +500,24 @@ table tbody tr td .configuracion div span:hover{
     width: 100%;
     background-color: var(--color-sildebar-hover);
 }
-/**/
-table tbody tr .accion{
-    display: flex;
+/*acciones*/
+/* table tbody tr .accion{
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows:100% ;
+    align-items: center;
     justify-content: center;
-    column-gap: 10px;
-}
+    border: 1px solid red;
+    gap: 10px;
+    height: auto;
+    width: 100%;
+} */
 table tbody tr .accion span{
     cursor: pointer;
     padding: 8px 8px;
+    margin-left: 5px;
     border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 /*fin tabla*/
 /*panel permiso*/
@@ -560,6 +567,20 @@ table tbody tr .accion span{
     font-weight: 600;
     font-size: 14px;
     margin-bottom: 5px;
+}
+.opciones_panel_control{
+    display: none;
+}
+.opciones_panel_control-activo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 5px;
+    row-gap: 5px;
+}
+.guardarinformacion{
+    width: 100%;
+    margin-top: 10px;
 }
 /*panel permiso*/
 /*perfil de usuario*/
@@ -653,11 +674,38 @@ table tbody tr .accion span{
     color: #7a9e9e;
     text-transform: capitalize;
 }
-
+/*paginacion*/
+table tfoot ul{
+    display: flex;
+    justify-content: center;
+    column-gap: 2px;
+    align-items: center;
+    padding: 5px 0px;
+}
+table tfoot ul li{
+    cursor: pointer;
+    width: 35px;
+    height: 28px;
+    color: var(--fondo-sildebar);
+    align-self: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+table tfoot ul .activo{
+    color: var(--color-sildebar-hover);
+    font-weight:700 ;
+    box-shadow: 0px 0px 5px rgba(32, 62, 37, 0.7);
+    border:2px solid #7ac59a;
+}
+table tfoot ul .activo div{
+    font-weight:700 ;
+}
+/*fin paginacion*/
 /*fin perfil de usuario*/
 /*fin tamaño Computadora*/
 /*inicio tamaño tablet*/
- @media (768px <= width < 1024px){
+ @media (768px <= width < 1025px){
     .sildebar{
         background-color: #383838;
     }
@@ -771,7 +819,7 @@ table tbody tr .accion span{
         left: 0px;
     }
     /*fin*/
-    /*tabla informacion*/
+    /* tabla informacion*/
     /*fin*/
 }
 /*inicio tamaño de un celular*/

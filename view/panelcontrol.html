@@ -115,25 +115,88 @@
                                     <div class="form-check">
                                       <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
                                       <label class="form-check-label" for="invalidCheck2">
-                                        panel control
+                                        pagina panel control
                                       </label>
+                                      <i class="configopciones fa fa-chevron-down" aria-hidden="true" onclick="funcion_opciones(0)"></i>
+                                      <div class="opciones_panel_control">
+                                        <div class="opciones_control">
+                                          <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                         <label class="form-check-label" for="invalidCheck2">
+                                           crear
+                                         </label>
+                                        </div>
+                                        <div class="opciones_control">
+                                          <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                         <label class="form-check-label" for="invalidCheck2">
+                                           actualizar
+                                         </label>
+                                        </div>
+                                        <div class="opciones_control">
+                                          <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                         <label class="form-check-label" for="invalidCheck2">
+                                           elimiar
+                                         </label>
+                                        </div>
+                                      </div>
                                     </div>
                                  </div>
                                  <div class="form-group">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2">
-                                      <label class="form-check-label" for="invalidCheck2">
-                                        clientes
-                                      </label>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                    <label class="form-check-label" for="invalidCheck2">
+                                      pagina cliente
+                                    </label>
+                                    <i class="configopciones fa fa-chevron-down" aria-hidden="true" onclick="funcion_opciones(1)"></i>
+                                    <div class="opciones_panel_control">
+                                      <div class="opciones_control">
+                                        <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                       <label class="form-check-label" for="invalidCheck2">
+                                         insertar
+                                       </label>
+                                      </div>
+                                      <div class="opciones_control">
+                                        <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                       <label class="form-check-label" for="invalidCheck2">
+                                         actualizar
+                                       </label>
+                                      </div>
+                                      <div class="opciones_control">
+                                        <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                       <label class="form-check-label" for="invalidCheck2">
+                                         elimiar
+                                       </label>
+                                      </div>
                                     </div>
+                                  </div>
                                  </div>
                                  <div class="form-group">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2">
-                                      <label class="form-check-label" for="invalidCheck2">
-                                        empleado
-                                      </label>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                    <label class="form-check-label" for="invalidCheck2">
+                                      pagina empleado
+                                    </label>
+                                    <i class="configopciones fa fa-chevron-down" aria-hidden="true" onclick="funcion_opciones(2)"></i>
+                                    <div class="opciones_panel_control">
+                                      <div class="opciones_control">
+                                        <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                       <label class="form-check-label" for="invalidCheck2">
+                                         crear
+                                       </label>
+                                      </div>
+                                      <div class="opciones_control">
+                                        <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                       <label class="form-check-label" for="invalidCheck2">
+                                         actualizar
+                                       </label>
+                                      </div>
+                                      <div class="opciones_control">
+                                        <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2">
+                                       <label class="form-check-label" for="invalidCheck2">
+                                         elimiar
+                                       </label>
+                                      </div>
                                     </div>
+                                  </div>
                                  </div>
                                  <div class="form-group">
                                     <div class="form-check">
@@ -198,7 +261,38 @@
                                     </div>
                                  </div>
                             </div>
+                            <div class="permiso_accesos">
+                              <div class="titulo_navegadores">administrador</div>
+                              <div class="form-group">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                    <label class="form-check-label" for="invalidCheck2">
+                                      panel control
+                                    </label>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                    <label class="form-check-label" for="invalidCheck2">
+                                      clientes
+                                    </label>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                    <label class="form-check-label" for="invalidCheck2">
+                                      empleado
+                                    </label>
+                                  </div>
+                               </div>
+                          </div>
                         </form>
+                        <div class="guardarinformacion">
+                          <button type="submit" class="btn btn-danger">cancelar</button>
+                          <button type="submit" class="btn btn-primary">guardar</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -215,4 +309,10 @@
 <script src="../lib/Jquery/bootstrap.min.js"></script>
 <script src="https://cdn.datatables.net/2.1.4/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/2.1.4/js/dataTables.bootstrap4.js"></script>
-
+<script>
+  function funcion_opciones(i){
+    let configopciones=document.querySelectorAll('.configopciones');
+      let control_opciones=configopciones[i].nextElementSibling;
+      control_opciones.classList.toggle('opciones_panel_control-activo');
+  }
+</script>

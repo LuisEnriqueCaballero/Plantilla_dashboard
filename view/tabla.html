@@ -202,7 +202,7 @@
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td >Enrique cballero</td>
+                                        <td >Enrique essssssssssssssssssssssssssssssssssllero</td>
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td>Mark</td>
@@ -211,21 +211,11 @@
                                         <td>Otto</td>
                                         <td>Mark</td>
                                         <td class="text-center">activo</td>
-                                        <td class="text-center p-2">
-                                            <div class="configuracion">
-                                                <button class="btn btn-sm boton-config" onclick="config_acciones(2)"><i class="text-info fa fa-cog" aria-hidden="true"></i> <span>config</span></button>
-                                                <div>
-                                                    <span  onclick="viwemodal()">
-                                                        <i class="text-success fa fa-pencil" aria-hidden="true"></i> <span>editar</span>
-                                                    </span>
-                                                    <span>
-                                                        <i class="text-danger fa fa-file-pdf-o" aria-hidden="true"></i> <span>pdf</span>
-                                                    </span>
-                                                    <span>
-                                                        <i class="text-primary fa fa-id-card-o" aria-hidden="true"></i> <span>detalle</span>
-                                                    </span>
-                                                </div>
-                                            </div>
+                                        <td class='text-center p-2 accion'>
+                                            <span class='text-success fa fa-pencil editar' aria-hidden='true' title='editar'></span>
+                                            <span class='text-primary fa fa-info detalle' aria-hidden='true' title='detalle'></span>
+                                            <span class='text-danger fa fa-file-pdf-o pdf' aria-hidden='true' title='imprimi pdf'></span>
+                                         </td>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -234,17 +224,13 @@
                                             <td colspan="16"><nav aria-label="Page navigation example">
                                                 <ul class="pagination justify-content-end pagination-sm">
                                                   <li class="page-item disabled">
-                                                    <a class="page-link">
-                                                        <i class="fa fa-backward" aria-hidden="true"></i>
-                                                    </a>
+                                                    <i class="fa fa-angle-double-left text-dark" aria-hidden="true"></i>
                                                   </li>
-                                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                  <li class="page-item activo"><div class="number_paginacion">1</div></li>
+                                                  <li class="page-item"><div class="number_paginacion">120</div></li>
+                                                  <li class="page-item"><div class="number_paginacion">3</div></li>
                                                   <li class="page-item">
-                                                    <a class="page-link" href="#">
-                                                        <i class="fa fa-forward" aria-hidden="true"></i>
-                                                    </a>
+                                                    <i class="fa fa-angle-double-right text-success" aria-hidden="true"></i>
                                                   </li>
                                                 </ul>
                                               </nav></td>
@@ -268,7 +254,6 @@
 <script src="../lib/Jquery/bootstrap.min.js"></script>
 <script src="https://cdn.datatables.net/2.1.4/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/2.1.4/js/dataTables.bootstrap4.js"></script>
-
 <script>
     function exportar(){
         let exportar=document.querySelector('.export_infomacion div');
