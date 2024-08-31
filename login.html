@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/login.css">
-    <title>login usuario</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/login.css">
+  <title>login usuario</title>
 </head>
+
 <body>
-    <div class="disenio_login">
-        <form>
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="inputEmail4">email</label>
-                <input type="email" class="form-control" id="inputEmail4">
-              </div>
-              <div class="form-group col-md-12">
-                <label for="inputPassword4">password</label>
-                <input type="password" class="form-control" id="inputPassword4">
-              </div>
-            </div>
-            <button type="submit" class="btn btn-dark btn-sm">ingresar</button>
-        </form>
+  <div class="disenio_login">
+    <form id="formlogin">
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="usuario">usuario</label>
+          <input type="text" class="form-control" name="usuario" id="usuario" placeholder="ingrese tu usuario">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="password">contrase&ntilde;a</label>
+          <input type="password" class="form-control" name="password" id="password" placeholder="ingrese password">
+        </div>
+      </div>
+      <button type="button" class="btn btn-dark btn-sm" onclick="loguearse()">ingresar</button>
+    </form>
+  </div>
+  <!-- <div class="aviso_alerta">
+    <div class="alerta">
+      <i class="text-danger fa fa-exclamation-circle fa-4x" aria-hidden="true"></i>
+      <span>Tus datos son invalido</span>
     </div>
+  </div> -->
 </body>
+
 </html>
 <script src="lib/Jquery/jquery-3.6.0.min.js"></script>
 <script src="lib/Jquery/popper.min.js"></script>
 <script src="lib/Jquery/bootstrap.min.js"></script>
+<script>
+  function loguearse() {
+    let datos = $('#formlogin').serialize();
+    $.ajax({
+      type: 'POST',
+      dataType: 'JSON',
+      data: datos,
+      url: './controller/ControllUsuario.php?ope=1',
+      success: function (result) {
+        if (result.confir) {
+          window.location.href='./view/index.php';
+        } else {
+          let div = `<div class="aviso_alerta">
+                     <div class="alerta">
+                     <i class="text-danger fa fa-exclamation-circle fa-4x" aria-hidden="true"></i>
+                     <span>${result.mensaje}</span>
+                     </div>
+                     </div>`;
+          $('body').append(div);
+          setTimeout(() => {
+            // Remove the alert div
+            $('.aviso_alerta').remove();
+            $('#formlogin')[0].reset();
+          }, 2000); // 2000 milliseconds = 2 seconds
+        }
+      }
+    })
+  }
+</script>
